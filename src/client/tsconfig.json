@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "lib": [
+      "es2016",
+      "dom"
+    ],
+    "allowJs": true,
+    "outDir": "../../dist",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "module": "esnext",
+    "resolveJsonModule": true,
+    "jsx": "react",
+    "noEmit": false,
+    "noEmitOnError": false,
+    "skipLibCheck": true,
+  },
+}

@@ -1,0 +1,5 @@
+# Group 1
+User-agent: *
+Disallow: /login/
+
+Sitemap: https://www.unionrg.com/sitemap.xml
