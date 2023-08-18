@@ -12,7 +12,7 @@ module.exports = {
     path: path.join(__dirname, outputDirectory),
     // `filename` provides a template for naming your bundles (remember to use `[name]`)
     filename: '[name].bundle.js',
-    publicPath: 'auto',
+    publicPath: './',
 
     // `chunkFilename` provides a template for naming code-split bundles (optional)
     chunkFilename: '[name].bundle.js',
