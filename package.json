@@ -5,11 +5,12 @@
   "main": "src/server/index.js",
   "scripts": {
     "build": "tsc -p src/client && webpack --mode production",
-    "start": "yarn && npm run build && tsc -p src/server && nodemon src/server/dist/index.js && node src/server/dist/index.js > union_log.log 2> union_error.log",
+    "start": "yarn && npm run build && tsc --skipLibCheck -p src/server && nodemon src/server/dist/index.js && node src/server/dist/index.js > union_log.log 2> union_error.log",
     "client": "tsc -p src/client && webpack-dev-server --mode development --devtool inline-source-map --hot",
     "server": "nodemon src/server/index.ts && nodemon src/server/dist",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "jest"
+    "test": "jest",
+    "a":"nodemon src/server/dist/index.js"
   },
   "author": "Shaunt Keshishian",
   "dependencies": {

@@ -1,9 +1,9 @@
 import type { Application } from 'express';
 import type { MongoClient } from 'mongodb';
 
-const { verifyToken } = require('../middleware/authJwt.ts');
-const { adminDealCheck } = require('../middleware/adminDealCheck.ts');
-const deal = require('../controllers/deal.controller.ts');
+const { verifyToken } = require('../middleware/authJwt');
+const { adminDealCheck } = require('../middleware/adminDealCheck');
+const deal = require('../controllers/deal.controller');
 
 module.exports = (app: Application, client: MongoClient) => {
   app.post('/api/getdealagents', verifyToken, deal.getdealagents(client));

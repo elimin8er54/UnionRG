@@ -5,16 +5,16 @@ import { updateMLS } from './helpers/mlsapi';
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
-const mls = require('./routes/mls.route.ts');
+const mls = require('./routes/mls.route');
 
 const DAILY_TIME = 1000 * 60 * 60 * 24;
 const app = express();
-const uri = 'mongodb://localhost:27017/mls?retryWrites=true&w=majority&authSource=admin&keepAlive=true&poolSize=30&autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000';
+const uri = 'mongodb+srv://Shaunt:4ubYTm3X4M32UZAf@cluster0.cad7dxp.mongodb.net/mls?retryWrites=true&w=majority&authSource=admin&keepAlive=true&poolSize=30&autoReconnect=true&socketTimeoutMS=360000&connectTimeoutMS=360000';
 
 const client = new MongoClient(uri);
 // Don't want to do anything before the connection to the database is established.
 client.connect().then(() => {
-  setInterval(() => { updateMLS(client); }, DAILY_TIME);
+ 
 
   app.use(compression());
   const port = 3001;

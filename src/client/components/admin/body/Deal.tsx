@@ -29,7 +29,7 @@ const Deal = (props: Props) => {
 
   return (
     <div role="tabpanel" hidden={value !== index}>
-      {value === index && <Box p={3}>{children}</Box>}
+      {value === index && <>{children}</>}
     </div>
   );
 };

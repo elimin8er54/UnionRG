@@ -3,10 +3,10 @@ import type { MongoClient } from 'mongodb';
 // eslint-disable-next-line import/no-import-module-exports
 import type { Application } from 'express';
 
-const { verifyToken, passedCheck } = require('../middleware/authJwt.ts');
-const { adminCheck, passedAdminCheck } = require('../middleware/adminCheck.ts');
-const user = require('../controllers/user.controller.ts');
-const { photoHeadshot } = require('../helpers/photoengine.ts');
+const { verifyToken, passedCheck } = require('../middleware/authJwt');
+const { adminCheck, passedAdminCheck } = require('../middleware/adminCheck');
+const user = require('../controllers/user.controller');
+const { photoHeadshot } = require('../helpers/photoengine');
 
 const headshot = photoHeadshot();
 

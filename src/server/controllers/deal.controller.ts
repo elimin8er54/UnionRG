@@ -16,7 +16,7 @@ const {
   updatedealstatus,
   getonedeal,
   createleaserenewal,
-} = require('../models/deal.models.ts');
+} = require('../models/deal.models');
 
 exports.getdealagents = (client: MongoClient) => (req: Request, res: Response): void => {
   getdealagents(req, client, (data: any) => {
